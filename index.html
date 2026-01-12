@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mark Jopriz Cabelinga | Automation Engineer</title>
+    <title>Mark Jopriz Cabelinga | Senior Software Test Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -30,28 +30,19 @@
             padding: 3rem 2rem;
             border-radius: 1rem;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            max-width: 480px;
+            max-width: 520px;
             text-align: center;
             border: 1px solid #334155;
         }
-        .profile-header {
-            margin-bottom: 1.5rem;
-        }
         .profile-img {
-            width: 140px;
-            height: 140px;
-            background-color: var(--tag-bg);
+            width: 130px;
+            height: 130px;
+            /* Placeholder generated from initials. Replace src with your photo later. */
             border-radius: 50%;
             margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--text-muted);
+            display: block;
             border: 4px solid var(--bg-color);
-            overflow: hidden; /* Ensures photo stays circular */
         }
-        /* If you have a photo, uncomment the img tag in HTML and remove the div above */
         
         h1 { margin: 0; font-size: 1.75rem; font-weight: 700; letter-spacing: -0.025em; }
         .title { color: var(--accent); font-weight: 600; margin-top: 0.5rem; font-size: 1.1rem; }
@@ -59,8 +50,16 @@
         .bio { 
             color: var(--text-muted); 
             line-height: 1.7; 
-            margin: 2rem 0; 
-            font-size: 1rem; 
+            margin: 1.5rem 0; 
+            font-size: 0.95rem; 
+        }
+
+        /* Subtle separator for sections */
+        .divider {
+            height: 1px;
+            background: #334155;
+            margin: 1.5rem auto;
+            width: 50%;
         }
 
         .section-label {
@@ -68,7 +67,7 @@
             letter-spacing: 0.1em;
             font-size: 0.75rem;
             color: var(--text-muted);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             display: block;
             font-weight: 700;
         }
@@ -77,70 +76,77 @@
             display: flex; 
             flex-wrap: wrap; 
             justify-content: center; 
-            gap: 0.75rem; 
-            margin-bottom: 2.5rem; 
+            gap: 0.6rem; 
+            margin-bottom: 2rem; 
         }
         .skill-tag {
             background: var(--tag-bg); 
             color: var(--text-main);
-            padding: 0.5rem 1rem; 
+            padding: 0.4rem 0.8rem; 
             border-radius: 0.5rem; 
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             font-weight: 500;
-            transition: transform 0.2s;
+            transition: all 0.2s;
+            cursor: default;
         }
-        .skill-tag:hover { transform: translateY(-2px); background: #475569; }
+        .skill-tag:hover { 
+            transform: translateY(-2px); 
+            background: var(--accent); 
+            color: var(--bg-color); 
+        }
 
         .btn {
             display: inline-block;
             background-color: var(--accent);
             color: #0f172a;
-            padding: 0.75rem 1.5rem;
+            padding: 0.75rem 2rem;
             border-radius: 0.5rem;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             transition: opacity 0.2s;
         }
         .btn:hover { opacity: 0.9; }
         
-        .social-links { margin-top: 1.5rem; display: flex; justify-content: center; gap: 1.5rem; }
-        .social-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
-        .social-links a:hover { color: var(--accent); }
-
+        .footer-note {
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #64748b; /* Darker slate for footer */
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         
-        <img src="https://ui-avatars.com/api/?name=Mark+Jopriz&background=38bdf8&color=0f172a&size=256" alt="Mark Jopriz Cabelinga" class="profile-img">
+        <img src="https://ui-avatars.com/api/?name=Mark+Jopriz&background=38bdf8&color=0f172a&size=256&bold=true" alt="Mark Jopriz Cabelinga" class="profile-img">
 
-        <div class="profile-header">
-            <h1>Mark Jopriz Cabelinga</h1>
-            <div class="title">Software Developer & Automation Specialist</div>
-        </div>
+        <h1>Mark Jopriz Cabelinga</h1>
+        <div class="title">Senior Software Test Engineer</div>
         
         <p class="bio">
-            Experienced with <strong>Cypress</strong> and <strong>PowerShell</strong> automation. 
-            Focused on building efficient, scalable testing frameworks and optimizing workflows. 
-            Based in the Philippines.
+            Career-shifter with <strong>11+ years</strong> of expertise in designing and maintaining automation frameworks. 
+            Proficient in end-to-end STLC, CI/CD pipelines, and collaborative Agile workflows.
         </p>
 
-        <span class="section-label">Core Technologies</span>
+        <div class="divider"></div>
+
+        <span class="section-label">Technical Arsenal</span>
         <div class="skills">
-            <span class="skill-tag">Cypress.io</span>
-            <span class="skill-tag">PowerShell</span>
-            <span class="skill-tag">Git / GitHub</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Cypress (JS/TS)</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Robot Framework</span>
+            <span class="skill-tag">Azure DevOps</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">ISTQB Certified</span>
         </div>
 
-        <a href="https://www.linkedin.com/in/mark-jopriz-cabelinga" target="_blank" class="btn">Connect on LinkedIn</a>
+        <a href="https://www.linkedin.com/in/mark-jopriz-cabelinga" target="_blank" class="btn">View LinkedIn Profile</a>
 
-        <div class="social-links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a>
-            <a href="mailto:contact@markjop.com">Email Me</a>
-        </div>
+        <p class="footer-note">
+            P.S. This profile is 100% human-written… though I did consult DeepSeek for resume tips. 
+            Even testers need a little QA sometimes! 🤖
+        </p>
     </div>
 
 </body>
