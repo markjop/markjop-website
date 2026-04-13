@@ -26,6 +26,7 @@
             --tag-bg: #334155;         /* Slate 700 */
             --ibm-blue: #1d4ed8;       /* Specific Blue for IBM Tag */
         }
+        
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
@@ -37,6 +38,7 @@
             margin: 0;
             padding: 20px;
         }
+
         .container {
             background-color: var(--card-bg);
             padding: 3rem 2rem;
@@ -46,6 +48,7 @@
             text-align: center;
             border: 1px solid #334155;
         }
+
         .profile-img {
             width: 130px;
             height: 130px;
@@ -89,6 +92,7 @@
             gap: 0.6rem; 
             margin-bottom: 2rem; 
         }
+
         .skill-tag {
             background: var(--tag-bg); 
             color: var(--text-main);
@@ -98,33 +102,35 @@
             font-weight: 500;
             transition: all 0.2s;
             cursor: default;
-            text-decoration: none; /* Ensure links look like tags */
+            text-decoration: none;
             display: inline-block;
         }
+
         .skill-tag:hover { 
             transform: translateY(-2px); 
             background: var(--accent); 
             color: var(--bg-color); 
         }
         
-        /* Special class for the IBM Credly Badge */
         .skill-tag.featured {
             background-color: var(--ibm-blue);
             color: white;
             border: 1px solid var(--ibm-blue);
             cursor: pointer;
         }
+
         .skill-tag.featured:hover {
-            background-color: #2563eb; /* Slightly lighter blue on hover */
+            background-color: #2563eb;
             color: white;
         }
 
-        /* Button Container for perfect spacing on mobile */
+        /* --- UPDATED ACTION BUTTONS SECTION --- */
+        
         .action-buttons {
             display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
             margin-bottom: 2rem;
         }
 
@@ -136,27 +142,59 @@
             border-radius: 0.5rem;
             text-decoration: none;
             font-weight: 700;
-            transition: opacity 0.2s;
-            min-width: 140px; /* Ensures buttons are similar width */
+            transition: all 0.2s;
+            text-align: center;
         }
-        .btn:hover { opacity: 0.9; }
+
+        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
         
-        /* Secondary Button Style (Resume) */
+        /* Full width for LinkedIn */
+        .btn.primary-full {
+            width: 100%;
+            max-width: 340px;
+            box-sizing: border-box;
+        }
+
+        /* The sub-row for PDF and Word */
+        .resume-row {
+            display: flex;
+            gap: 0.75rem;
+            width: 100%;
+            max-width: 340px;
+        }
+
+        .resume-row .btn {
+            flex: 1; /* Makes both buttons equal width */
+            padding: 0.65rem 0.5rem;
+            font-size: 0.85rem;
+        }
+
         .btn.secondary {
             background-color: var(--tag-bg);
             color: var(--text-main);
         }
-        .btn.secondary:hover {
-            background-color: #475569;
+
+        .btn.outline {
+            background-color: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--tag-bg);
         }
 
-        /* Icon Links (Github/Email) */
+        .btn.outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background-color: rgba(56, 189, 248, 0.05);
+        }
+
+        /* --- END UPDATED SECTION --- */
+
         .icon-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             margin-top: 1rem;
         }
+
         .icon-link {
             color: var(--text-muted);
             text-decoration: none;
@@ -166,6 +204,7 @@
             align-items: center;
             gap: 0.5rem;
         }
+
         .icon-link:hover { color: var(--accent); }
         
         .footer-note {
@@ -214,12 +253,17 @@
         </div>
 
         <div class="action-buttons">
-            <a href="https://www.linkedin.com/in/mark-jopriz-cabelinga" target="_blank" class="btn">
-                View LinkedIn
+            <a href="https://www.linkedin.com/in/mark-jopriz-cabelinga" target="_blank" class="btn primary-full">
+                View LinkedIn Profile
             </a>
-            <a href="resume.pdf" target="_blank" class="btn secondary">
-                Download Resume
-            </a>
+            <div class="resume-row">
+                <a href="assets/resume.pdf" target="_blank" class="btn secondary">
+                    Download PDF
+                </a>
+                <a href="assets/resume.docx" class="btn outline">
+                    ATS-Friendly Word
+                </a>
+            </div>
         </div>
 
         <div class="icon-links">
@@ -234,8 +278,9 @@
         </div>
 
         <p class="footer-note">
-            P.S. This profile is 100% human-written… though I did consult DeepSeek for resume tips. 
-            Even testers need a little QA sometimes! 🤖
+            Meticulously tested and hand-coded. After 11+ years in automation, I’ve learned that 
+            the best results come from human logic assisted by smart tools. No bugs found (yet), 
+            but feel free to report any edge cases! 🤖
         </p>
     </div>
 
